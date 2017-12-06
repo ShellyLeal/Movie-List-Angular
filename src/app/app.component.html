@@ -1,0 +1,9 @@
+<h1>{{title}}</h1>
+<nav>
+  <a routerLink="/dashboard">Ranking</a>
+  <a routerLink="/movies">Filmes</a>
+</nav>
+<div class="main" [@animRoutes]="getPage(appOutlet)">
+  <router-outlet #appOutlet="outlet"></router-outlet>
+</div>
+<app-messages></app-messages>

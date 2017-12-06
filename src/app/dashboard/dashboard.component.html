@@ -1,0 +1,15 @@
+<h3>Melhores Filmes de Todos os Tempos</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let movie of movies" class="col-1-4"
+      routerLink="/detail/{{movie.id}}">
+    <div class="module movie">
+      <h4>{{movie.name}}</h4>
+    </div>
+  </a>
+   <iframe width="444" height="315" src="https://www.youtube.com/embed/E3QFzppKn0g" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+   <iframe width="444" height="315" src="https://www.youtube.com/embed/UkCSag29Mck" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+   <iframe width="444" height="315" src="https://www.youtube.com/embed/3n82KaVLSn8" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+   <iframe width="444" height="315" src="https://www.youtube.com/embed/s7EdQ4FqbhY" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+</div>
+
+<app-movie-search></app-movie-search>

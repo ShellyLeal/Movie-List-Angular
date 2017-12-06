@@ -1,0 +1,21 @@
+<h2>Movie List</h2>
+
+<div>
+  <label>Movie name:
+    <input #movieName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(movieName.value); movieName.value=''">
+    add
+  </button>
+</div>
+<img src="https://static1.squarespace.com/static/518e613de4b02c1428e0df52/5196f71de4b0e693d8cfd20c/5196f721e4b0e693d8cfdbae/1368848193833/Cat+watching+movie.jpg" alt="Mountain View">
+<ul class="movies">
+  <li *ngFor="let movie of movies">
+    <a routerLink="/detail/{{movie.id}}">
+      <span class="badge">{{movie.id}}</span> {{movie.name}}
+    </a>
+    <button class="delete" title="delete movie"
+    (click)="delete(movie)">x</button>
+  </li>
+</ul>
